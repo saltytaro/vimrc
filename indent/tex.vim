@@ -260,3 +260,8 @@ function GetTeXIndent()
 endfunction
 
 " vim: set sw=4 textwidth=78:
+
+" =============================================================================
+" Automatically update xdvi when text is entered in Vim.
+au BufWritePost *.tex silent call Tex_RunLaTeX()
+au BufWritePost *.tex silent !pkill -USR1 xdvi.bin

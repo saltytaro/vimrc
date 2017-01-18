@@ -296,3 +296,8 @@ endif
 call Tex_Debug("compiler/tex.vim: sourcing this file", "comp")
 
 " vim:fdm=marker:ff=unix:noet:ts=4:sw=4
+
+" =============================================================================
+" Automatically updte xdvi when text added in Vim.
+au BufWritePost *.tex silent call Tex_RunLaTeX()
+au BufWritePost *.tex silent !pkill -USR1 xdvi.bin
