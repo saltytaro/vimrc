@@ -33,3 +33,4 @@ filetype indent on
 
 " Auto save the current document every time there is a pause in typing.
 :au! CursorHoldI,CursorHold <buffer> silent! :update
+:set updatetime=800
