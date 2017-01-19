@@ -34,3 +34,6 @@ filetype indent on
 " Auto save the current document every time there is a pause in typing.
 :au! CursorHoldI,CursorHold <buffer> silent! :update
 :set updatetime=800
+
+" Set <F9> to compile C programs.
+map <F9> :w <CR> :!clear && gcc % -o %< && ./%< <CR>
